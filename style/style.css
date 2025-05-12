@@ -1,0 +1,139 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to right bottom, #f0f0f0, #e0e0e0);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+}
+
+#task-app {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 95%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column; /* Organiza os filhos em coluna */
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    letter-spacing: 0.5px;
+}
+
+#filter-container { /* Container para o label e o select de filtro */
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+label {
+    margin-right: 15px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+#filter {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex-grow: 1;
+    font-size: 1em;
+    color: #555;
+    transition: border-color 0.3s ease;
+}
+
+#filter:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#task-list li:last-child {
+    border-bottom: none;
+}
+
+#task-list li:hover {
+    background-color: #f9f9f9;
+}
+
+.task-checkbox {
+    margin-right: 15px;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid #aaa;
+    border-radius: 4px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.task-checkbox:checked {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+.task-checkbox:checked::before {
+    content: '\👍';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2em;
+}
+
+.task-checkbox:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+#task-list li.completed {
+    color: #777;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+#task-list li > span {
+    flex-grow: 1;
+    font-size: 1.1em;
+}
+
+/* Estilos para o container do filtro (label e select) */
+#task-app > div {
+    display: flex;
+    justify-content: flex-start; /* Alinha o filtro à esquerda */
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd; /* Adiciona uma linha abaixo do filtro */
+}
+
+#task-app > div label {
+    margin-right: 10px;
+}

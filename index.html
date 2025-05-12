@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="icon" href="resources/list-circle-icon-256x256-hygltnmh.png">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="task-app">
+        <h1>Lista de Tarefas</h1>
+        <div>
+            <label for="filter">Filtrar:</label>
+            <select id="filter">
+                <option value="all">Todas</option>
+                <option value="completed">Concluídas</option>
+                <option value="not-completed">Não Concluídas</option>
+            </select>
+        </div>
+        <ul id="task-list">
+            <li>
+                <input type="checkbox" class="task-checkbox"> Estudar para a prova
+            </li>
+            <li>
+                <input type="checkbox" class="task-checkbox"> Fazer um projeto de arte
+            </li>
+            <li>
+                <input type="checkbox" class="task-checkbox"> Comprar mantimentos
+            </li>
+            <li>
+                <input type="checkbox" class="task-checkbox"> Limpar o quarto
+            </li>
+            <li>
+                <input type="checkbox" class="task-checkbox"> Ler um livro
+            </li>
+            <li>
+                <input type="checkbox" class="task-checkbox"> Fazer exercícios
+            </li>
+        </ul>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
