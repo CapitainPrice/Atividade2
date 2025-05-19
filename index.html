@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
     <link rel="icon" href="resources/list-circle-icon-256x256-hygltnmh.png">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
     <div id="task-app">
-        <h1>Lista de Tarefas</h1>
+        <h1>Minha Lista de Tarefas</h1>
+
+        <form id="task-form">
+            <input id="task-input" type="text" placeholder="Digite sua tarefa" required />
+            <button id="add-button" type="submit">Adicionar</button>
+        </form>
+
         <div>
             <label for="filter">Filtrar:</label>
             <select id="filter">
@@ -18,6 +24,7 @@
                 <option value="not-completed">Não Concluídas</option>
             </select>
         </div>
+
         <ul id="task-list">
             <li>
                 <input type="checkbox" class="task-checkbox"> Estudar para a prova
@@ -35,9 +42,14 @@
                 <input type="checkbox" class="task-checkbox"> Ler um livro
             </li>
             <li>
-                <input type="checkbox" class="task-checkbox"> Fazer exercícios
+                <input type="checkbox" class="task-checkbox"> Apertar espaço para o Easter Egg
             </li>
         </ul>
+        
+
+        <div id="video-container">
+            <iframe id="youtube-video" src="https://www.icegif.com/wp-content/uploads/2023/08/icegif-160.gif" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
     <script src="scripts/script.js"></script>
 </body>
